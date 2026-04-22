@@ -6,15 +6,17 @@ Vestigo ingests emails from Microsoft 365, Google Workspace, Exchange Server, an
 
 > The name comes from the Latin *vestigare* -- to track, trace, and investigate.
 
-![Overall Progress](https://progress-bar.xyz/8/?title=Overall+Progress&width=400&style=flat)  
-![Phase 1](https://progress-bar.xyz/38/?title=Phase+1&width=400&style=flat)  
-![Phase 2](https://progress-bar.xyz/0/?title=Phase+2&width=400&style=flat)  
-![Phase 3](https://progress-bar.xyz/0/?title=Phase+3&width=400&style=flat)  
-![Phase 4](https://progress-bar.xyz/0/?title=Phase+4&width=400&style=flat)  
-![Phase 5](https://progress-bar.xyz/0/?title=Phase+5&width=400&style=flat)  
-![Phase 6](https://progress-bar.xyz/0/?title=Phase+6&width=400&style=flat)  
-![Phase 7](https://progress-bar.xyz/0/?title=Phase+7&width=400&style=flat)  
-![Phase 8](https://progress-bar.xyz/0/?title=Phase+8&width=400&style=flat)
+---
+
+## Planned Progression
+
+| Milestone | Phases | Description | Progress |
+|---|---|---|---|
+| v0.1.0 -- Alpha | 1, 2 | Local file ingestion, header and auth analysis | ![](https://progress-bar.xyz/23/?style=flat&width=120) |
+| v0.2.0 | 3, 4 | Redirect tracing, attachment analysis, hash lookups | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+| v0.3.0 | 5, 6 | Threat intel and OSINT enrichment | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+| v0.4.0 | 7 | Live mail source integrations | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+| v1.0.0 | 8 | Corpus analysis, campaign detection, report export | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
 
 ---
 
