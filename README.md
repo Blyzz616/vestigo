@@ -6,6 +6,8 @@ Vestigo ingests emails from Microsoft 365, Google Workspace, Exchange Server, an
 
 > The name comes from the Latin *vestigare* -- to track, trace, and investigate.
 
+![Overall Progress](https://progress-bar.xyz/8/?title=Overall+Progress&width=400&style=flat)
+
 ---
 
 ## Features
@@ -57,13 +59,13 @@ Vestigo ingests emails from Microsoft 365, Google Workspace, Exchange Server, an
 | Async runtime | tokio |
 | Email parsing | mail-parser |
 | SPF / DKIM / DMARC | mail-auth |
-| DNS resolution | trust-dns-resolver |
+| DNS resolution | hickory-resolver |
 | HTML parsing | scraper |
 | HTTP / redirect tracing | reqwest |
 | HTML sanitization | ammonia |
 | PDF extraction | lopdf |
 | Local cache / reputation DB | rusqlite (SQLite) |
-| WHOIS lookups | whois |
+| WHOIS lookups | whois-rust |
 | Headless browser | chromiumoxide |
 
 ---
