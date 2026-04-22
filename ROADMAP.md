@@ -9,7 +9,15 @@ Status markers:
 
 ---
 
+## Overall Progress
+
+![Overall](https://progress-bar.xyz/8/?title=Overall&width=400&style=flat)
+
+---
+
 ## Phase 1 -- Foundation
+
+![Phase 1](https://progress-bar.xyz/38/?title=Phase+1&width=400&style=flat)
 
 Core infrastructure and basic email analysis. Target: first usable build.
 
@@ -26,6 +34,8 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ## Phase 2 -- Header and Authentication Analysis
 
+![Phase 2](https://progress-bar.xyz/0/?title=Phase+2&width=400&style=flat)
+
 - [planned] SPF validation
 - [planned] DKIM validation
 - [planned] DMARC validation
@@ -36,6 +46,8 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ## Phase 3 -- Link and Redirect Analysis
 
+![Phase 3](https://progress-bar.xyz/0/?title=Phase+3&width=400&style=flat)
+
 - [planned] HTTP redirect chain tracing (hop-by-hop to final destination)
 - [planned] Toggleable link preview panel
 - [planned] Headless screenshot capture of linked URLs (chromiumoxide)
@@ -44,6 +56,8 @@ Core infrastructure and basic email analysis. Target: first usable build.
 ---
 
 ## Phase 4 -- File and Attachment Analysis
+
+![Phase 4](https://progress-bar.xyz/0/?title=Phase+4&width=400&style=flat)
 
 - [planned] PDF content and metadata extraction (lopdf)
 - [planned] Attachment hash computation: MD5 and SHA-256
@@ -55,6 +69,8 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ## Phase 5 -- Threat Intelligence Integration
 
+![Phase 5](https://progress-bar.xyz/0/?title=Phase+5&width=400&style=flat)
+
 - [planned] VirusTotal API: domain reputation and file hash queries
 - [planned] URLhaus / Abuse.ch feed (offline-capable local mirror)
 - [planned] AbuseIPDB: IP reputation queries
@@ -65,6 +81,8 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ## Phase 6 -- OSINT Enrichment
 
+![Phase 6](https://progress-bar.xyz/0/?title=Phase+6&width=400&style=flat)
+
 - [planned] Shodan integration
 - [planned] IPInfo integration
 - [planned] GreyNoise integration
@@ -74,6 +92,8 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ## Phase 7 -- Mail Source Integrations
 
+![Phase 7](https://progress-bar.xyz/0/?title=Phase+7&width=400&style=flat)
+
 - [planned] Microsoft 365 via MS Graph API (Mail.Read scope, MSAL auth)
 - [planned] Google Workspace via Gmail API (gmail.readonly scope, OAuth2)
 - [planned] Exchange Server on-premises via EWS/SOAP
@@ -81,6 +101,8 @@ Core infrastructure and basic email analysis. Target: first usable build.
 ---
 
 ## Phase 8 -- Corpus Analysis and Reporting
+
+![Phase 8](https://progress-bar.xyz/0/?title=Phase+8&width=400&style=flat)
 
 - [planned] Similarity scoring across ingested email corpus
 - [planned] Phishing campaign clustering and surfacing
