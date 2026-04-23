@@ -35,9 +35,9 @@ Core infrastructure and basic email analysis. Target: first usable build.
 - [x] Attachment hash display (SHA-256, SHA-1) in analysis panel
 - [x] Known-good URL library with per-email classification
 - [x] Domain summary per email
-- [ ] in-progress Left panel: email entries expandable as folders when attachments present
-- [ ] in-progress Left panel: nested emails treated as expandable folders, clickable separately
-- [ ] in-progress Left panel: parent email remains accented if any child is unresolved
+- in-progress Left panel: email entries expandable as folders when attachments present
+- in-progress Left panel: nested emails treated as expandable folders, clickable separately
+- in-progress Left panel: parent email remains accented if any child is unresolved
 - [ ] Left panel: children cannot be deleted -- only top-level emails
 - [ ] Left panel: children can be flagged independently
 - [ ] Left panel: colour flags on emails (8 colours, user-nameable in settings)
