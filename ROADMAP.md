@@ -21,39 +21,39 @@ Status markers:
 
 Core infrastructure and basic email analysis. Target: first usable build.
 
-- [done] Project scaffold (Tauri 2 + React + TypeScript)
-- [done] Rust module structure and Cargo.toml dependencies
-- [done] React UI shell: three-panel layout (email tree / main content / analysis)
-- [done] Local file ingestion: EML, HTML, TXT, PDF
-- [done] SQLite schema: emails, accounts, watched folders, known-good URLs
-- [done] Ingest-and-store: all ingested emails copied to internal storage and indexed
-- [done] Left panel: inbox view grouped by date (Today / Yesterday / Day+Date / Last Week / Last Month / Older / Deleted)
-- [done] Left panel: unactioned emails shown bold with blue accent
-- [done] Left panel: clicking an email marks it as actioned after 5 seconds
-- [done] Left panel: context menu -- Mark as Resolved, Mark as Unresolved, Delete
-- [done] Left panel: Delete moves email to Deleted section, not permanently removed
-- [done] Attachment hash display (SHA-256, SHA-1) in analysis panel
-- [done] Known-good URL library with per-email classification
-- [done] Domain summary per email
-- [in progress] Left panel: email entries expandable as folders when attachments present
-- [in progress] Left panel: nested emails treated as expandable folders, clickable separately
-- [in progress] Left panel: parent email remains accented if any child is unresolved
-- [planned] Left panel: children cannot be deleted -- only top-level emails
-- [planned] Left panel: children can be flagged independently
-- [planned] Left panel: colour flags on emails (8 colours, user-nameable in settings)
-- [planned] Left panel: context menu flag submenu for all items
-- [planned] Left panel: right-click on children -- flag options only (no delete)
-- [planned] Drag and drop EML/MSG/PDF/HTML/TXT onto the window to ingest
-- [planned] Ctrl+O and File > Open for ad-hoc ingestion
-- [planned] Newly ingested file sorted by email timestamp, list scrolls to it
-- [planned] Search bar: filter by sender, recipient, subject, flag colour
-- [planned] Copy-on-click for all key string values (subject, from, to, hashes, body text, IOCs)
-- [planned] Global font size: Ctrl+Plus / Ctrl+Minus / Ctrl+Scroll; Shift limits to pane under mouse
-- [planned] Full header viewer (toggle to see all raw headers)
-- [planned] Envelope / Return-Path address shown alongside From in header display
-- [planned] Disable default WebView context menu globally
-- [planned] Known-good library: support root domain (covers all subdomains) and specific subdomain entries
-- [planned] Settings window: mail accounts, watched folders, flag colour names, general preferences
+- [x] Project scaffold (Tauri 2 + React + TypeScript)
+- [x] Rust module structure and Cargo.toml dependencies
+- [x] React UI shell: three-panel layout (email tree / main content / analysis)
+- [x] Local file ingestion: EML, HTML, TXT, PDF
+- [x] SQLite schema: emails, accounts, watched folders, known-good URLs
+- [x] Ingest-and-store: all ingested emails copied to internal storage and indexed
+- [x] Left panel: inbox view grouped by date (Today / Yesterday / Day+Date / Last Week / Last Month / Older / Deleted)
+- [x] Left panel: unactioned emails shown bold with blue accent
+- [x] Left panel: clicking an email marks it as actioned after 5 seconds
+- [x] Left panel: context menu -- Mark as Resolved, Mark as Unresolved, Delete
+- [x] Left panel: Delete moves email to Deleted section, not permanently removed
+- [x] Attachment hash display (SHA-256, SHA-1) in analysis panel
+- [x] Known-good URL library with per-email classification
+- [x] Domain summary per email
+- [ ] in-progress Left panel: email entries expandable as folders when attachments present
+- [ ] in-progress Left panel: nested emails treated as expandable folders, clickable separately
+- [ ] in-progress Left panel: parent email remains accented if any child is unresolved
+- [ ] Left panel: children cannot be deleted -- only top-level emails
+- [ ] Left panel: children can be flagged independently
+- [ ] Left panel: colour flags on emails (8 colours, user-nameable in settings)
+- [ ] Left panel: context menu flag submenu for all items
+- [ ] Left panel: right-click on children -- flag options only (no delete)
+- [ ] Drag and drop EML/MSG/PDF/HTML/TXT onto the window to ingest
+- [ ] Ctrl+O and File > Open for ad-hoc ingestion
+- [ ] Newly ingested file sorted by email timestamp, list scrolls to it
+- [ ] Search bar: filter by sender, recipient, subject, flag colour
+- [ ] Copy-on-click for all key string values (subject, from, to, hashes, body text, IOCs)
+- [ ] Global font size: Ctrl+Plus / Ctrl+Minus / Ctrl+Scroll; Shift limits to pane under mouse
+- [ ] Full header viewer (toggle to see all raw headers)
+- [ ] Envelope / Return-Path address shown alongside From in header display
+- [ ] Disable default WebView context menu globally
+- [ ] Known-good library: support root domain (covers all subdomains) and specific subdomain entries
+- [ ] Settings window: mail accounts, watched folders, flag colour names, general preferences
 
 ---
 
