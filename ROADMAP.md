@@ -3,9 +3,9 @@
 This document outlines the planned development phases for Vestigo. Each phase builds on the previous one and represents a releasable milestone.
 
 Status markers:
-- `[done]` -- complete
-- `[in progress]` -- actively being worked on
-- `[planned]` -- not yet started
+- `- [x]` -- complete
+- `- in progress` -- actively being worked on
+- `- [ ]` -- not yet started
 
 ---
 
@@ -35,9 +35,9 @@ Core infrastructure and basic email analysis. Target: first usable build.
 - [x] Attachment hash display (SHA-256, SHA-1) in analysis panel
 - [x] Known-good URL library with per-email classification
 - [x] Domain summary per email
-- in-progress Left panel: email entries expandable as folders when attachments present
-- in-progress Left panel: nested emails treated as expandable folders, clickable separately
-- in-progress Left panel: parent email remains accented if any child is unresolved
+- in progress Left panel: email entries expandable as folders when attachments present
+- in progress Left panel: nested emails treated as expandable folders, clickable separately
+- in progress Left panel: parent email remains accented if any child is unresolved
 - [ ] Left panel: children cannot be deleted -- only top-level emails
 - [ ] Left panel: children can be flagged independently
 - [ ] Left panel: colour flags on emails (8 colours, user-nameable in settings)
@@ -61,11 +61,11 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ![Phase 2](https://progress-bar.xyz/0/?title=Phase+2&width=400&style=flat)
 
-- [planned] SPF validation
-- [planned] DKIM validation
-- [planned] DMARC validation
-- [planned] Email timeline reconstruction from Received: header chain
-- [planned] Sender / routing anomaly highlighting
+- [ ] SPF validation
+- [ ] DKIM validation
+- [ ] DMARC validation
+- [ ] Email timeline reconstruction from Received: header chain
+- [ ] Sender / routing anomaly highlighting
 
 ---
 
@@ -73,10 +73,10 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ![Phase 3](https://progress-bar.xyz/0/?title=Phase+3&width=400&style=flat)
 
-- [planned] HTTP redirect chain tracing (hop-by-hop to final destination)
-- [planned] Toggleable link preview panel
-- [planned] Headless screenshot capture of linked URLs (chromiumoxide)
-- [planned] URL deobfuscation (encoded characters, URL shorteners)
+- [ ] HTTP redirect chain tracing (hop-by-hop to final destination)
+- [ ] Toggleable link preview panel
+- [ ] Headless screenshot capture of linked URLs (chromiumoxide)
+- [ ] URL deobfuscation (encoded characters, URL shorteners)
 
 ---
 
@@ -84,11 +84,11 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ![Phase 4](https://progress-bar.xyz/0/?title=Phase+4&width=400&style=flat)
 
-- [planned] PDF content and metadata extraction (lopdf)
-- [planned] Attachment hash computation: SHA-256 and SHA-1
-- [planned] VirusTotal hash lookup
-- [planned] IOC extraction: IP addresses, domains, file hashes, Bitcoin addresses, CVEs
-- [planned] SQLite local cache for hashes and reputation results
+- [ ] PDF content and metadata extraction (lopdf)
+- [ ] Attachment hash computation: SHA-256 and SHA-1
+- [ ] VirusTotal hash lookup
+- [ ] IOC extraction: IP addresses, domains, file hashes, Bitcoin addresses, CVEs
+- [ ] SQLite local cache for hashes and reputation results
 
 ---
 
@@ -96,11 +96,11 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ![Phase 5](https://progress-bar.xyz/0/?title=Phase+5&width=400&style=flat)
 
-- [planned] VirusTotal API: domain reputation and file hash queries
-- [planned] URLhaus / Abuse.ch feed (offline-capable local mirror)
-- [planned] AbuseIPDB: IP reputation queries
-- [planned] WHOIS lookups with historical record display
-- [planned] Domain reputation scoring and flagging
+- [ ] VirusTotal API: domain reputation and file hash queries
+- [ ] URLhaus / Abuse.ch feed (offline-capable local mirror)
+- [ ] AbuseIPDB: IP reputation queries
+- [ ] WHOIS lookups with historical record display
+- [ ] Domain reputation scoring and flagging
 
 ---
 
@@ -108,10 +108,10 @@ Core infrastructure and basic email analysis. Target: first usable build.
 
 ![Phase 6](https://progress-bar.xyz/0/?title=Phase+6&width=400&style=flat)
 
-- [planned] Shodan integration
-- [planned] IPInfo integration
-- [planned] GreyNoise integration
-- [planned] Consolidated OSINT panel per IOC
+- [ ] Shodan integration
+- [ ] IPInfo integration
+- [ ] GreyNoise integration
+- [ ] Consolidated OSINT panel per IOC
 
 ---
 
@@ -123,15 +123,15 @@ Vestigo connects to mailboxes read-only. Emails are downloaded and stored locall
 copies are left on the server. Multiple accounts from different providers can be
 configured simultaneously via the settings window.
 
-- [planned] Settings window: add / remove / enable / disable mail accounts
-- [planned] Microsoft 365 via MS Graph API (Mail.Read scope, MSAL auth)
-- [planned] Gmail via Gmail API (gmail.readonly scope, OAuth2)
-- [planned] Yahoo Mail and other providers via IMAP (readonly)
-- [planned] Generic IMAP support
-- [planned] Exchange Server on-premises via EWS/SOAP
-- [planned] Monitored folder support: watch one or more local directories for new EML files
-- [planned] Background polling with configurable interval per account
-- [planned] In-app notification for new mail
+- [ ] Settings window: add / remove / enable / disable mail accounts
+- [ ] Microsoft 365 via MS Graph API (Mail.Read scope, MSAL auth)
+- [ ] Gmail via Gmail API (gmail.readonly scope, OAuth2)
+- [ ] Yahoo Mail and other providers via IMAP (readonly)
+- [ ] Generic IMAP support
+- [ ] Exchange Server on-premises via EWS/SOAP
+- [ ] Monitored folder support: watch one or more local directories for new EML files
+- [ ] Background polling with configurable interval per account
+- [ ] In-app notification for new mail
 
 ---
 
@@ -139,10 +139,10 @@ configured simultaneously via the settings window.
 
 ![Phase 8](https://progress-bar.xyz/0/?title=Phase+8&width=400&style=flat)
 
-- [planned] Similarity scoring across ingested email corpus
-- [planned] Phishing campaign clustering and surfacing
-- [planned] One-click investigation report export (PDF)
-- [planned] One-click investigation report export (Markdown)
+- [ ] Similarity scoring across ingested email corpus
+- [ ] Phishing campaign clustering and surfacing
+- [ ] One-click investigation report export (PDF)
+- [ ] One-click investigation report export (Markdown)
 
 ---
 
