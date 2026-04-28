@@ -6,17 +6,7 @@ Vestigo ingests emails from Microsoft 365, Google Workspace, Exchange Server, an
 
 > The name comes from the Latin *vestigare* -- to track, trace, and investigate.
 
----
-
-## Planned Progression
-
-| Milestone | Phases | Description | Progress |
-|---|---|---|---|
-| v0.1.0 -- Alpha | 1, 2 | Local file ingestion, header and auth analysis | ![](https://progress-bar.xyz/23/?style=flat&width=120) |
-| v0.2.0 | 3, 4 | Redirect tracing, attachment analysis, hash lookups | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
-| v0.3.0 | 5, 6 | Threat intel and OSINT enrichment | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
-| v0.4.0 | 7 | Live mail source integrations | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
-| v1.0.0 | 8 | Corpus analysis, campaign detection, report export | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+![Overall Progress](https://progress-bar.xyz/8/?title=Overall+Progress&width=400&style=flat)
 
 ---
 
@@ -104,6 +94,9 @@ vestigo/
   src-tauri/            Rust backend
     src/
       main.rs           Tauri entry point
+      lib.rs            Tauri command registration
+      types.rs          Shared data structures
+      ingest/           Local file ingestion (EML, MSG, PDF, HTML, TXT)
       email/            Email parsing and header analysis
       analysis/         Link extraction, IOC detection, redirect tracing
       intel/            Threat intelligence integrations
@@ -112,6 +105,18 @@ vestigo/
       db/               SQLite cache and reputation database
   public/               Static frontend assets
 ```
+
+---
+
+## Planned Progression
+
+| Milestone | Phases | Description | Progress |
+|---|---|---|---|
+| v0.1.0 -- Alpha | 1, 2 | Local file ingestion, header and auth analysis | ![](https://progress-bar.xyz/23/?style=flat&width=120) |
+| v0.2.0 | 3, 4 | Redirect tracing, attachment analysis, hash lookups | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+| v0.3.0 | 5, 6 | Threat intel and OSINT enrichment | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+| v0.4.0 | 7 | Live mail source integrations | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+| v1.0.0 | 8 | Corpus analysis, campaign detection, report export | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
 
 ---
 
