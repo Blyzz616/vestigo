@@ -112,7 +112,7 @@ vestigo/
 
 | Milestone | Phases | Description | Progress |
 |---|---|---|---|
-| v0.1.0 -- Alpha | 1, 2 | Local file ingestion, header and auth analysis | ![](https://progress-bar.xyz/23/?style=flat&width=120) |
+| v0.1.0 -- Alpha | 1, 2 | Local file ingestion, header and auth analysis | ![](https://progress-bar.xyz/30/?style=flat&width=120) |
 | v0.2.0 | 3, 4 | Redirect tracing, attachment analysis, hash lookups | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
 | v0.3.0 | 5, 6 | Threat intel and OSINT enrichment | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
 | v0.4.0 | 7 | Live mail source integrations | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
