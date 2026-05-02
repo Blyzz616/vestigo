@@ -11,13 +11,13 @@ Status markers:
 
 ## Overall Progress
 
-![Overall](https://progress-bar.xyz/10/?title=Overall&width=400&style=flat)
+![Overall](https://progress-bar.xyz/18/?title=Overall&width=400&style=flat)
 
 ---
 
 ## Phase 1 -- Foundation
 
-![Phase 1](https://progress-bar.xyz/50/?title=Phase+1&width=400&style=flat)
+![Phase 1](https://progress-bar.xyz/80/?title=Phase+1&width=400&style=flat)
 
 Core infrastructure and basic email analysis. Target: first usable build.
 
@@ -25,47 +25,49 @@ Core infrastructure and basic email analysis. Target: first usable build.
 - [x] Rust module structure and Cargo.toml dependencies
 - [x] React UI shell: three-panel layout (email tree / main content / analysis)
 - [x] Local file ingestion: EML, HTML, TXT, PDF
-- [x] SQLite schema: emails, accounts, watched folders, known-good URLs
+- [x] SQLite schema: emails, accounts, watched folders, known-good URLs, flag colour names
 - [x] Ingest-and-store: all ingested emails copied to internal storage and indexed
 - [x] Left panel: inbox view grouped by date (Today / Yesterday / Day+Date / Last Week / Last Month / Older / Deleted)
-- [x] Left panel: unactioned emails shown bold with blue accent
-- [x] Left panel: clicking an email marks it as actioned after 5 seconds
-- [x] Left panel: context menu -- Mark as Resolved, Mark as Unresolved, Delete
+- [x] Left panel: unresolved emails shown bold with colour accent bar
+- [x] Left panel: clicking an email marks it as resolved after 5 seconds
+- [x] Left panel: context menu -- Mark as Resolved, Mark as Unresolved, Delete, Flag
 - [x] Left panel: Delete moves email to Deleted section, not permanently removed
+- [x] Left panel: expand arrow on right side of tile, reveals attachment tree
+- [x] Left panel: nested emails treated as expandable folders, clickable separately
+- [x] Left panel: type colour coding -- EML/MSG blue, PDF red, HTML green, TXT grey
+- [x] Left panel: bordered tiles per type colour
+- [x] Multi-file open via dialog (Ctrl+O)
+- [x] Open Folder with directory scan modal and confirm/cancel
 - [x] Attachment hash display (SHA-256, SHA-1) in analysis panel
 - [x] Known-good URL library with per-email classification
-- [x] Domain summary per email
-- in progress Left panel: email entries expandable as folders when attachments present
-- in progress Left panel: nested emails treated as expandable folders, clickable separately
-- in progress Left panel: parent email remains accented if any child is unresolved
-- [ ] Left panel: children cannot be deleted -- only top-level emails
-- [ ] Left panel: children can be flagged independently
+- [x] Links in Document section with Copy URL, Copy Domain, Add to Known Good actions
+- [x] Domain summary chips per email (click to copy)
+- [x] Authentication header interpretation: SPF, DKIM, ARC with pass/fail/warn badges
+- [ ] Left panel: parent email remains accented if any child is unresolved
+- [ ] Left panel: children can be flagged independently (context menu flag only, no delete)
 - [ ] Left panel: colour flags on emails (8 colours, user-nameable in settings)
-- [ ] Left panel: context menu flag submenu for all items
-- [ ] Left panel: right-click on children -- flag options only (no delete)
 - [ ] Drag and drop EML/MSG/PDF/HTML/TXT onto the window to ingest
-- [ ] Ctrl+O and File > Open for ad-hoc ingestion
 - [ ] Newly ingested file sorted by email timestamp, list scrolls to it
 - [ ] Search bar: filter by sender, recipient, subject, flag colour
 - [ ] Copy-on-click for all key string values (subject, from, to, hashes, body text, IOCs)
-- [ ] Global font size: Ctrl+Plus / Ctrl+Minus / Ctrl+Scroll; Shift limits to pane under mouse
 - [ ] Full header viewer (toggle to see all raw headers)
-- [ ] Envelope / Return-Path address shown alongside From in header display
-- [ ] Disable default WebView context menu globally
-- [ ] Known-good library: support root domain (covers all subdomains) and specific subdomain entries
 - [ ] Settings window: mail accounts, watched folders, flag colour names, general preferences
 
 ---
 
 ## Phase 2 -- Header and Authentication Analysis
 
-![Phase 2](https://progress-bar.xyz/0/?title=Phase+2&width=400&style=flat)
+![Phase 2](https://progress-bar.xyz/10/?title=Phase+2&width=400&style=flat)
 
-- [ ] SPF validation
-- [ ] DKIM validation
-- [ ] DMARC validation
+- [x] SPF result parsing from Received-SPF header
+- [x] DKIM signature detection
+- [x] ARC chain detection and auth result parsing
+- [ ] Full SPF validation via DNS lookup
+- [ ] Full DKIM signature cryptographic verification
+- [ ] Full DMARC policy lookup and validation
 - [ ] Email timeline reconstruction from Received: header chain
 - [ ] Sender / routing anomaly highlighting
+- [ ] Return-Path vs From domain mismatch detection
 
 ---
 
@@ -146,6 +148,24 @@ configured simultaneously via the settings window.
 
 ---
 
+## Phase 9 -- Connector and Add-on System
+
+![Phase 9](https://progress-bar.xyz/0/?title=Phase+9&width=400&style=flat)
+
+A plugin registry allowing third-party connectors to extend Vestigo with new panels,
+analysis steps, and data sources.
+
+- [ ] Connector API surface and plugin registry
+- [ ] Claude AI connector: pipe email body/IOCs to Claude API for threat assessment panel
+- [ ] Custom pane support: connectors can register additional panels
+- [ ] VirusTotal as a swappable connector (replaces direct integration)
+- [ ] Splunk / SIEM output connector
+- [ ] TheHive / MISP integration connector
+- [ ] Generic webhook connector (fire payload to any URL on analysis)
+- [ ] Connector marketplace / registry documentation
+
+---
+
 ## Future / Unscheduled
 
 - Theme support: dark mode, light mode, and OS-linked automatic switching
@@ -159,12 +179,13 @@ configured simultaneously via the settings window.
 ## v1.1 -- Network Sync
 
 A secure peer-to-peer sync layer allowing multiple Vestigo instances running in
-separate sandboxes to share actioned/unactioned and flag state.
+separate sandboxes to share resolved/unresolved and flag state.
 
 - Only state metadata is exchanged -- no email content, headers, or attachments
 - Communication is encrypted (noise protocol or mutual TLS)
 - Each instance identified by a key pair generated on first run
 - Peers added manually via the settings window
+- Easter egg has been laid
 
 ---
 
@@ -172,9 +193,10 @@ separate sandboxes to share actioned/unactioned and flag state.
 
 | Milestone | Phases | Description | Progress |
 |---|---|---|---|
-| v0.1.0 -- Alpha | 1, 2 | Inbox view, file ingestion, header and auth analysis | ![](https://progress-bar.xyz/10/?style=flat&width=120) |
+| v0.1.0 -- Alpha | 1, 2 | Inbox view, file ingestion, header and auth analysis | ![](https://progress-bar.xyz/30/?style=flat&width=120) |
 | v0.2.0 | 3, 4 | Redirect tracing, attachment analysis, hash lookups | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
 | v0.3.0 | 5, 6 | Threat intel and OSINT enrichment | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
 | v0.4.0 | 7 | Live mail source integrations, settings window | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+| v0.5.0 | 9 | Connector and add-on system | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
 | v1.0.0 | 8 | Corpus analysis, campaign detection, report export | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
-| v1.1.0 | -- | Secure cross-sandbox network sync | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
+| v1.1.0 | -- | Secure cross-sandbox network sync + easter eggs | ![](https://progress-bar.xyz/0/?style=flat&width=120) |
