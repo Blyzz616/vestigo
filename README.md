@@ -6,7 +6,7 @@ Vestigo ingests emails from Microsoft 365, Google Workspace, Exchange Server, an
 
 > The name comes from the Latin *vestigare* -- to track, trace, and investigate.
 
-![Overall Progress](https://progress-bar.xyz/8/?title=Overall+Progress&width=400&style=flat)
+![Overall Progress](https://progress-bar.xyz/18/?title=Overall+Progress&width=400&style=flat)
 
 ---
 
